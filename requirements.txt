@@ -14,5 +14,5 @@ pip
 scikit-learn
 scipy
 spacy
-fastai2
+fastai
 fastprogress

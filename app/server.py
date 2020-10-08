@@ -1,17 +1,26 @@
 import aiohttp
 import asyncio
 import uvicorn
-from fastai2.vision.all import *
+from fastai.vision.all import *
 from io import BytesIO
 from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = YOUR_GDRIVE_LINK_HERE
-export_file_name = 'export.pkl'
+export_file_url = "https://www.dropbox.com/s/2ycgds04rgix179/model.pkl?dl=1"
+export_file_name = 'model.pkl'
 
-classes = YOUR_CLASSES_HERE
+classes = ["Agrostemma-githago_Cotyledon",
+"Agrostemma-githago_Intermediate",
+"Agrostemma-githago_Foliage",
+"Beta-vulgaris_Cotyledon",
+"Beta-vulgaris_Intermediate",
+"Beta-vulgaris_Foliage",
+"Crepis-setosa_Cotyledon",
+"Crepis-setosa_Intermediate",
+"Crepis-setosa_Foliage"
+ ]
 path = Path(__file__).parent
 
 app = Starlette()
