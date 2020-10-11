@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, url_for, jsonify
+from flask import Flask, render_template, request, url_for
 from fastai.vision.all import load_learner, PILImage
 import re
-from flask_cors import CORS, cross_origin
+# from flask_cors import CORS, cross_origin
 import logging
 
 app = Flask(__name__)
@@ -33,7 +33,7 @@ def predict():
         "plant_type":plant_type,
         "growth_stage": growth_stage,
         "probability": probability,
-    }, comment='asd')
+    })
 
 
 if __name__ == '__main__':
