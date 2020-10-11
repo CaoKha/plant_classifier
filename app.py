@@ -4,7 +4,6 @@ import re
 from flask_cors import CORS, cross_origin
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__)
 
 learn = load_learner('./models/model.pkl')
@@ -38,4 +37,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
