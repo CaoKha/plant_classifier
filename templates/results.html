@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
-</head>
-<body>
-
-	<header>
-		<div class="container">
-		<!-- <div id="brandname">
-			ML App
-		</div> -->
-		<h2>Classification Results</h2>
-		
-	</div>
-	</header>
-	<!-- <p style="color:blue;font-size:20;text-align: center;"><b>Image Prediction</b></p> -->
-	<div class="results">
-
- 
-		<h3>This is a: {{ prediction }}<h3>
+{% extends "layout.html" %}
+{% block body %}
 
 
-	</div>
-
-</body>
+<h1>Classification Results</h1>
+<p>Type of plant: <strong>{{ prediction["plant_type"] }}</strong><br />
+	Growth stage: <strong>{{ prediction["growth_stage"] }}</strong><br />
+	Probability: <strong>{{prediction["probability"]}} %</strong></p>
+{% endblock %}
