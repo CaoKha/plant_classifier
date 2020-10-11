@@ -7,7 +7,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__)
 
-learn = load_learner('./Models/model.pkl')
+learn = load_learner('./models/model.pkl')
 
 @app.route('/')
 def homepage():
