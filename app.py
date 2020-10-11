@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, jsonify
-from fastai.vision.all import *
+from fastai.vision.all import load_learner, PILImage
 import re
 from flask_cors import CORS, cross_origin
 import logging
